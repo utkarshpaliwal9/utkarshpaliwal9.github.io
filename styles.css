@@ -731,6 +731,38 @@ strong {
     color: var(--text-secondary);
 }
 
+/* What I'm Known For Section */
+.known-for-content {
+    max-width: 800px;
+}
+
+.known-for-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.known-for-list li {
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.7;
+}
+
+.known-for-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.known-for-list li strong {
+    color: var(--text-primary);
+}
+
 /* Projects Section */
 .projects-grid {
     display: grid;
