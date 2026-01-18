@@ -39,6 +39,26 @@
     --transition-slow: 400ms ease;
 }
 
+/* Light Mode */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --bg-card: #ffffff;
+    
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    
+    --accent-primary: #0284c7;
+    --accent-secondary: #6366f1;
+    --accent-warm: #f59e0b;
+    --accent-green: #059669;
+    
+    --border-color: #e2e8f0;
+    --border-subtle: rgba(15, 23, 42, 0.08);
+}
+
 /* Reset & Base */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -73,6 +93,10 @@ body {
     z-index: 9999;
     opacity: 0.03;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+[data-theme="light"] .grain {
+    opacity: 0.015;
 }
 
 /* Typography */
@@ -185,6 +209,32 @@ strong {
 
 .nav-cta:hover {
     background: var(--text-primary);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    font-size: 1.125rem;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent-primary);
+    transform: rotate(180deg);
+}
+
+.theme-icon {
+    display: block;
+    line-height: 1;
 }
 
 /* Hero Section */

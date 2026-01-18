@@ -14,6 +14,7 @@
         initScrollAnimations();
         initNavHighlight();
         initTerminalTyping();
+        initThemeToggle();
     }
 
     /**
@@ -164,6 +165,30 @@
 
         // Start after initial delay
         setTimeout(typeCommand, 2000);
+    }
+
+    /**
+     * Theme Toggle
+     */
+    function initThemeToggle() {
+        const toggle = document.getElementById('theme-toggle');
+        const icon = toggle.querySelector('.theme-icon');
+        
+        // Check for saved theme preference or default to dark
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+        
+        toggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+        
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
     }
 
     /**
