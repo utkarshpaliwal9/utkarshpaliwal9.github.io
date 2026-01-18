@@ -1,211 +1,458 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Utkarsh Singh Paliwal</title>
-	<link rel="shortcut icon" href="https://i.imgur.com/gdRVds0.jpg" />
-	<link rel="stylesheet" type="text/css" href="avi.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="avi_media.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script type="text/javascript" src="avi.js"></script>
-
-	<link href="https://fonts.googleapis.com/css?family=Electrolize|Patua+One|Quicksand|Rubik" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Electrolize|Monoton|Patua+One|Quicksand|Rubik" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utkarsh Paliwal | Senior Software Engineer</title>
+    <meta name="description" content="Senior Software Engineer specializing in backend systems, distributed architectures, and production-grade data pipelines. Building reliable systems at scale.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="nav_container">
-	<div id="logo">
-    <img src="https://i.imgur.com/BzwuE79.png">
-	</div>
-<ul class="nav justify-content-end">
-	
-  <li class="nav-item" >
-  	    <a class="nav-link active" href="#" onclick="home()">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#" onclick="about()">About</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#" onclick="skills()">Skills</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#" onclick="edu()">Education</a>
-  </li>
-  
-</ul>
-</div>
-
-<div id="page">
-
-  <div id="p1_img">
-    <img src="https://drive.google.com/uc?export=view&id=1tHIdaxxLo23I0VqEX-VVp7EL26guOqQh" onmouseover="point()"><br>
-    <h3 class="display-5 ">Hi, I am Utkarsh Singh Paliwal</h3>
-    <p><br><br><br><br>Click 'About' on the top right.</p>
-  </div>
-
-  <div id="p2" class="row">
-  	<div class="col-sm-12" style="text-align: center;" id="p2_i_style">
-  		<i class="fa fa-user fa-3x text-info" aria-hidden="true"></i>
-  	     <h2 class="display-5 text-info" >ABOUT ME</h2>
-  	     
-  </div>
-  	 <div class="col-md-6" id="abstract">
-  	 	<p style="font-size: 18px;">I am a 20 years old enthusiastic Web developer. Also a Big Data and Machine Learning enthusiast. I like to challenge myself. I just want to do my best in every task that is assigned to me.
-Well I have 2 years of experience in front end development. I work with Student Club Gen-Y in SRM. I have worked on various mini projects and and currently also working on some classified ones.
-       </p>
-
-  	 </div>
-
-  	 <div class="col-md-6" id="contact">
-  	 	
-  	 	<h4 style="color: #696969;">Born :  <p class="lead offset-2">9th September 1997</p></h4><br>
-  	 	<h4 style="color: #696969;" id="h4_p">E-mail : <p class="lead offset-2" >theutkarshpaliwal@gmail.com</p></h4>
-  	 	  <div id="contact_icons">
-             <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
-             <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
-             <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-    	  </div>
-  	 </div>
-
-  </div>
-
-  <div id="p3" class="row">
-  	<div style="width: 100%;" id="p3_i">
-  		<i class="fa fa-cogs fa-3x text-success" aria-hidden="true"></i>
-  	    <h2 style="text-align: center;" class="text-success display-5">SKILLS</h2>
-   </div>
-  	<div id="skills" class="col-md-6" class="col-sm-12 justify-content-center">
-      <p class="lead text-success">C++/Java</p>
-  		<div class="progress">
-  <div class="progress-bar progress-bar-animated progress-bar-striped bg-info" role="progressbar" style="width: 95%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">95%</div>
-</div> 
-      <p class="lead text-success">HTML/CSS</p>
-<div class="progress ">
-  <div class="progress-bar progress-bar-animated progress-bar-striped bg-info" role="progressbar" style="width: 80%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">80%</div>
-</div>
-<p class="lead text-success">R Programming and Python</p>
-<div class="progress ">
-  <div class="progress-bar progress-bar-animated progress-bar-striped bg-info" role="progressbar" style="width: 70%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">70%</div>
-</div>
-<p class="lead text-success">Data Analytics and Machine Learning</p>
-<div class="progress ">
-  <div class="progress-bar progress-bar-animated progress-bar-striped bg-info" role="progressbar" style="width: 70%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="70">70%</div>
-</div>
-<p class="lead text-success">Android</p>
-<div class="progress ">
-  <div class="progress-bar progress-bar-animated progress-bar-striped bg-info" role="progressbar" style="width: 60%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="60">60%</div>
-</div>
-
-    </div>
-
-
-    <div id="s1" class="row">
-     <div id="s_code2" class="col-md-4">
-        <i class="fa fa-code fa-3x" aria-hidden="true"></i>
-        <p>Pratice Coding on HackerRank and HackerEarth.</p>
-     </div>
-     <div id="s_code2" class="col-md-4">
-        <i class="fa fa-users fa-3x" aria-hidden="true"></i>
-       <p class="lead">Good Comunication Skills.</p>
-     </div>
-</div>
- <div id="s2" class="row">
-     <div id="s_code2" class="col-md-4">
-        <i class="fa fa-futbol-o fa-3x" aria-hidden="true"></i>
-        <p>InterSchool Football Player.</p>
-     </div>
-     <div id="s_code2" class="col-md-4">
-        <i class="fa fa-code fa-3x" aria-hidden="true"></i>
-        <p>My works:<br>gagaha.webs.com<br>reversegravity.webs.com</p>
-     </div>
-</div>    
-
+    <div class="grain"></div>
     
-   </div>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">UP</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#projects">Projects</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">☀️</span>
+                </button>
+                <a href="#contact" class="nav-cta">Let's Talk</a>
+            </div>
+        </div>
+    </nav>
 
- <div id="p4" class="row">
- 	
- 			 <div class="col-sm-12"  id="edu_h">
- 			 	<i class="fa fa-graduation-cap  fa-3x text-danger" aria-hidden="true"></i>
- 			 	<h3 class="text-danger">Education</h3>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">Senior Software Engineer</div>
+                <h1 class="hero-name">Utkarsh Paliwal</h1>
+                <p class="hero-tagline">I build systems that stay quiet in production.</p>
+                <div class="hero-meta">
+                    <span class="meta-item">
+                        <span class="meta-icon">◆</span>
+                        Currently at Avalara
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">◆</span>
+                        Full Stack Senior Engineer
+                    </span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#work" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-text">whoami</span>
+                        </div>
+                        <div class="terminal-output">senior_backend_engineer</div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-text">cat focus.txt</span>
+                        </div>
+                        <div class="terminal-output">distributed_systems</div>
+                        <div class="terminal-output">data_pipelines</div>
+                        <div class="terminal-output">cloud_infrastructure</div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-text typing">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
- 			 </div>
- 			 <div id="container_card" class="col-sm-4 col-md-2">
-	           <div id="card">
-		      		 <div id="front">
-		      		 	
-                          <i class="fa fa-graduation-cap  fa-3x" aria-hidden="true"></i>
-                            <p class="lead" style="color: white">10<small>th</small></p>
-                            <p class="h5">In Year 2014</p>
-		      		 </div>
-		       		 <div id="back">
-		       		 	
-                        <p class="lead text-info" style="font-size: 28px;">Percentage</p>
-                        <p class="h5 display-4">92%</p>
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-lead">
+                        I'm a Senior Software Engineer who measures success not just by deliverables but also by what <em>doesn't</em> happen - no 3AM pages, no data inconsistencies, no unexplained failures. My job is to build systems that operators can trust and forget about.
+                    </p>
+                    <p>
+                        Most of my work lives in the unglamorous middle: data extraction pipelines that handle edge cases gracefully, cloud infrastructure that scales without intervention, and monitoring that surfaces real problems instead of noise. I've learned that the best systems aren't the cleverest ones—they're the ones that fail predictably and recover automatically.
+                    </p>
+                    <p>
+                        I think in trade-offs. Every technical decision has costs, and I've developed strong opinions about when to optimize for simplicity versus flexibility, when to build versus buy, and when "good enough" is actually the right answer. I prefer owning problems end-to-end rather than passing tickets between teams.
+                    </p>
+                </div>
+                <div class="about-sidebar">
+                    <div class="tech-stack">
+                        <h3>Primary Stack</h3>
+                        <ul class="tech-list">
+                            <li>Golang / Java / Python</li>
+                            <li>AWS (Lambda, Step Functions, S3, etc.)</li>
+                            <li>Terraform / Helm / CICD</li>
+                            <li>PostgreSQL / NoSQL</li>
+                            <li>Docker / Kubernetes</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">
+                        <h3>Domains</h3>
+                        <ul class="tech-list">
+                            <li>Data Pipelines</li>
+                            <li>Distributed Systems</li>
+                            <li>Cloud Infrastructure</li>
+                            <li>API Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Core Strengths -->
+        <section class="section strengths">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Core Strengths</h2>
+            </div>
+            <div class="strengths-grid">
+                <div class="strength-card">
+                    <div class="strength-icon">⚙️</div>
+                    <h3>Production-Grade Systems</h3>
+                    <p>I design for failure modes, not just happy paths. My systems include circuit breakers, retry logic, dead-letter queues, and clear runbooks. When things break, they break gracefully.</p>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-icon">📊</div>
+                    <h3>Data Pipeline Architecture</h3>
+                    <p>Built extraction and transformation pipelines processing millions of records with exactly-once semantics. Strong focus on idempotency, checkpointing, and handling upstream schema changes.</p>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-icon">☁️</div>
+                    <h3>AWS Infrastructure</h3>
+                    <p>Deep experience with serverless architectures (Lambda, Step Functions), event-driven systems, and infrastructure-as-code. I optimize for cost, observability, and operational simplicity.</p>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-icon">🔍</div>
+                    <h3>Observability & Debugging</h3>
+                    <p>I instrument systems to answer questions before they're asked. Structured logging, meaningful metrics, distributed tracing—built to reduce MTTR and eliminate alert fatigue.</p>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-icon">🏗️</div>
+                    <h3>System Design</h3>
+                    <p>I scope technical solutions, identify dependencies early, and communicate trade-offs clearly. I've led architecture discussions and turned ambiguous requirements into concrete implementation plans.</p>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-icon">🤝</div>
+                    <h3>Technical Leadership</h3>
+                    <p>Mentored engineers, led code reviews focused on teaching not gatekeeping, and written documentation that actually gets read. I believe good engineers make other engineers better.</p>
+                </div>
+            </div>
+        </section>
 
-		       		 </div>
-	           </div>
+        <!-- Featured Case Study -->
+        <section id="work" class="section case-study">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Featured Work</h2>
+            </div>
+            <div class="case-study-content">
+                <div class="case-header">
+                    <span class="case-label">Case Study</span>
+                    <h3 class="case-title">Production Data Extraction Pipeline</h3>
+                    <p class="case-subtitle">Rebuilding a brittle batch system into a resilient, observable pipeline</p>
+                </div>
 
-             </div>
+                <div class="case-section">
+                    <h4>The Problem</h4>
+                    <p>
+                        The existing data extraction system was a collection of scheduled scripts that pulled from 15+ external sources. It failed silently, had no retry logic, and required manual intervention 2-3 times per week. When it broke, nobody knew until downstream reports showed stale data—sometimes days later.
+                    </p>
+                    <p>
+                        The business impact was real: compliance reports were delayed, customer data was inconsistent, and the team was spending 20% of their time firefighting instead of building. This pipeline fed tax calculation and regulatory reporting workflows where data correctness isn't optional—errors surface as audit findings, not just bug tickets.
+                    </p>
+                </div>
 
-             <div id="container_card" class="col-sm-4 col-md-2">
-	           <div id="card">
-		      		 <div id="front">
-		      		 	
-                        <i class="fa fa-graduation-cap  fa-3x" aria-hidden="true"></i>
-                            <p class="lead" style="color: white">12<small>th</small></p>
-                                <p class="h5">In Year 2016</p>
-		      		 </div>
-		       		 <div id="back">
-		       		 	 <p class="lead text-info" style="font-size: 28px;">Percentage</p>
-                        <p class="h5 display-4">95.00%</p>
+                <div class="case-section">
+                    <h4>Constraints</h4>
+                    <ul class="case-list">
+                        <li>Zero downtime during migration—existing pipelines couldn't stop</li>
+                        <li>External APIs had rate limits, inconsistent schemas, and no change notifications</li>
+                        <li>Data had to be consistent across sources (eventual consistency acceptable, but bounded)</li>
+                        <li>Team bandwidth was limited—solution had to be operationally simple</li>
+                    </ul>
+                </div>
 
+                <div class="case-section">
+                    <h4>My Approach</h4>
+                    <p>
+                        I started by instrumenting the existing system to understand actual failure patterns—not assumed ones. This revealed that 80% of failures came from three sources with specific, fixable issues.
+                    </p>
+                    <p>
+                        Rather than a big-bang rewrite, I designed a parallel pipeline architecture using AWS Step Functions. Each extraction became an independent state machine with built-in retries, exponential backoff, and dead-letter queues for manual inspection. I introduced checkpointing so failed runs could resume rather than restart.
+                    </p>
+                    <p>
+                        Critically, I added change detection at the ingestion boundary—hashing incoming records against previous state to filter unchanged data before it hit downstream systems. This eliminated false update noise that had been triggering unnecessary reprocessing, alerts, and cache invalidations across dependent services.
+                    </p>
+                </div>
 
-		       		 </div>
-	           </div>
+                <div class="case-section">
+                    <h4>Key Design Decisions</h4>
+                    <div class="decision-grid">
+                        <div class="decision">
+                            <span class="decision-label">Decision</span>
+                            <p><strong>Step Functions over custom orchestration</strong></p>
+                            <span class="decision-label">Trade-off</span>
+                            <p>Higher per-execution cost, but dramatically reduced operational complexity. Visual debugging in the AWS console caught issues that would have required log archaeology before.</p>
+                        </div>
+                        <div class="decision">
+                            <span class="decision-label">Decision</span>
+                            <p><strong>Idempotent writes with conflict resolution</strong></p>
+                            <span class="decision-label">Trade-off</span>
+                            <p>Added complexity to write path, but enabled safe retries and eliminated entire classes of data corruption bugs.</p>
+                        </div>
+                        <div class="decision">
+                            <span class="decision-label">Decision</span>
+                            <p><strong>Schema validation at ingestion boundary</strong></p>
+                            <span class="decision-label">Trade-off</span>
+                            <p>Strict validation meant some records were rejected, but it prevented bad data from propagating. Added alerting on validation failures to catch upstream changes early.</p>
+                        </div>
+                    </div>
+                </div>
 
-             </div>
+                <div class="case-section">
+                    <h4>Outcomes</h4>
+                    <div class="outcomes-grid">
+                        <div class="outcome">
+                            <span class="outcome-value">95%</span>
+                            <span class="outcome-label">Reduction in manual interventions</span>
+                        </div>
+                        <div class="outcome">
+                            <span class="outcome-value">~0</span>
+                            <span class="outcome-label">Silent failures (all failures now alert)</span>
+                        </div>
+                        <div class="outcome">
+                            <span class="outcome-value">4hr → 20min</span>
+                            <span class="outcome-label">Mean time to recovery</span>
+                        </div>
+                        <div class="outcome">
+                            <span class="outcome-value">3 months</span>
+                            <span class="outcome-label">Running without major incidents</span>
+                        </div>
+                    </div>
+                </div>
 
-              <div id="container_card" class="col-sm-4 col-md-2">
-	           <div id="card">
-		      		 <div id="front">
-		      		 	 
-                        <i class="fa fa-graduation-cap  fa-3x" aria-hidden="true"></i>
-                        	<p class="lead" style="color: white">B-tech Computer Science</p>
-                              <p class="h5">Currently</p>
-		      		 </div>
-		       		 <div id="back">
-		       		 	
-                          <p class="lead text-info" style="font-size: 28px;">CGPA</p>
-                          <p class="lead text-muted">Currentely in 2<small>nd </small>year</p>
-                          <p class="h5 display-4">9.1</p>
+                <div class="case-tech">
+                    <h4>Tech Stack</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">AWS Lambda</span>
+                        <span class="tech-tag">Step Functions</span>
+                        <span class="tech-tag">SQS</span>
+                        <span class="tech-tag">DynamoDB</span>
+                        <span class="tech-tag">CloudWatch</span>
+                        <span class="tech-tag">Terraform</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		       		 </div>
-	           </div>
+        <!-- What I'm Known For -->
+        <section class="section known-for">
+            <div class="section-header">
+                <span class="section-number">03.5</span>
+                <h2 class="section-title">What I'm Known For</h2>
+            </div>
+            <div class="known-for-content">
+                <ul class="known-for-list">
+                    <li><strong>Making pipelines forgettable.</strong> Systems I build tend to disappear from team consciousness—which is the point.</li>
+                    <li><strong>Debugging across system boundaries.</strong> I'm often pulled into incidents that span services, teams, or vendors because I can trace causality through distributed systems.</li>
+                    <li><strong>Writing the doc that prevents the next outage.</strong> Post-mortems, runbooks, and decision records that actually get referenced.</li>
+                </ul>
+            </div>
+        </section>
 
-             </div>
+        <!-- Selected Projects -->
+        <section id="projects" class="section projects">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Selected Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>Alert Noise Reduction System</h3>
+                        <span class="project-type">Infrastructure</span>
+                    </div>
+                    <p class="project-desc">
+                        Our CloudWatch alarms were generating 50+ alerts daily, most of which were transient or duplicates. I built an alert aggregation layer that correlated related alerts, suppressed known-transient issues, and added context from recent deployments. The hard part wasn't filtering—it was defining suppression rules that wouldn't mask real incidents or create liability during audits.
+                    </p>
+                    <p class="project-impact">
+                        <strong>Result:</strong> Reduced actionable alerts by 70% while catching the same number of real incidents. On-call burden dropped significantly.
+                    </p>
+                    <div class="project-tech">
+                        <span>Lambda</span>
+                        <span>SNS</span>
+                        <span>DynamoDB</span>
+                        <span>Python</span>
+                    </div>
+                </article>
 
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>API Rate Limiter with Backpressure</h3>
+                        <span class="project-type">Backend System</span>
+                    </div>
+                    <p class="project-desc">
+                        Designed a distributed rate limiting system for our public API that handled burst traffic gracefully. Used token bucket algorithm with Redis, but the interesting part was the backpressure mechanism—instead of hard rejecting requests, we implemented queue-based smoothing for premium clients. The trade-off was accepting higher p99 latency in exchange for zero dropped requests—a deliberate business decision, not a technical one.
+                    </p>
+                    <p class="project-impact">
+                        <strong>Result:</strong> Zero customer-facing rate limit errors during traffic spikes while protecting backend services from overload.
+                    </p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Redis</span>
+                        <span>SQS</span>
+                        <span>API Gateway</span>
+                    </div>
+                </article>
 
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>Infrastructure Cost Optimization</h3>
+                        <span class="project-type">Cloud / DevOps</span>
+                    </div>
+                    <p class="project-desc">
+                        Led an audit of our AWS infrastructure that identified $15K/month in waste—over-provisioned RDS instances, orphaned EBS volumes, and Lambda functions with excessive memory allocation. Built automated reporting and right-sizing recommendations. The non-obvious challenge was distinguishing headroom-by-design from accidental over-provisioning without breaking performance under peak load.
+                    </p>
+                    <p class="project-impact">
+                        <strong>Result:</strong> 30% reduction in monthly cloud spend without performance impact. Established ongoing cost review as part of deployment process.
+                    </p>
+                    <div class="project-tech">
+                        <span>AWS Cost Explorer</span>
+                        <span>Terraform</span>
+                        <span>Python</span>
+                        <span>CloudWatch</span>
+                    </div>
+                </article>
+            </div>
+        </section>
 
+        <!-- How I Work -->
+        <section class="section how-i-work">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">How I Work</h2>
+            </div>
+            <div class="work-grid">
+                <div class="work-item">
+                    <h3>I own problems, not tasks</h3>
+                    <p>I don't just implement tickets—I understand why we're building something, push back on unclear requirements, and follow up after deployment to verify the problem is actually solved.</p>
+                </div>
+                <div class="work-item">
+                    <h3>I debug systematically</h3>
+                    <p>When something breaks, I form hypotheses, gather evidence, and narrow down methodically. I've developed strong intuition for where to look first, but I verify before acting.</p>
+                </div>
+                <div class="work-item">
+                    <h3>I write for the next engineer</h3>
+                    <p>Code comments explain why, not what. Documentation covers operational concerns, not just API signatures. I assume the person maintaining this system won't be me.</p>
+                </div>
+                <div class="work-item">
+                    <h3>I communicate proactively</h3>
+                    <p>Blockers are surfaced early. Technical decisions are documented with context. I'd rather over-communicate than let stakeholders be surprised.</p>
+                </div>
+                <div class="work-item">
+                    <h3>I optimize for predictability</h3>
+                    <p>I reach for proven patterns over novel approaches. The goal is systems that behave the same way at 3AM as they do during demos. Clever code is a liability.</p>
+                </div>
+                <div class="work-item">
+                    <h3>I invest in tooling</h3>
+                    <p>If I'm doing something manually more than twice, I automate it. Local development, testing, deployment—smooth tooling compounds over time.</p>
+                </div>
+            </div>
+        </section>
 
- 		
-        
- 	
+        <!-- What I'm Looking For -->
+        <section class="section looking-for">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">What I'm Looking For</h2>
+            </div>
+            <div class="looking-content">
+                <p class="looking-lead">
+                    I'm exploring senior and staff-level backend engineering roles where I can have significant technical ownership.
+                </p>
+                <div class="looking-grid">
+                    <div class="looking-item">
+                        <h3>Interesting Problems</h3>
+                        <p>Distributed systems, data platforms, infrastructure challenges. Problems where the solution isn't obvious and trade-offs matter.</p>
+                    </div>
+                    <div class="looking-item">
+                        <h3>High Ownership</h3>
+                        <p>Environments where engineers own systems end-to-end, not just write code to spec. I want to be accountable for outcomes.</p>
+                    </div>
+                    <div class="looking-item">
+                        <h3>Strong Engineering Culture</h3>
+                        <p>Teams that value code review, testing, documentation, and technical excellence. Places where senior engineers mentor and elevate others.</p>
+                    </div>
+                    <div class="looking-item">
+                        <h3>Impact at Scale</h3>
+                        <p>Products that serve real users at meaningful scale. I'm motivated by building systems that matter.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
- </div>
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="contact-content">
+                <h2>Let's Connect</h2>
+                <p class="contact-text">
+                    I'm always interested in hearing about challenging backend engineering opportunities. If you're building something technically interesting, I'd like to hear about it.
+                </p>
+                <div class="contact-links">
+                    <a href="https://github.com/utkarshpaliwal9" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/utkarshpaliwal9/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="mailto:theutkarshpaliwal@gmail.com" class="contact-link">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Email
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <footer class="footer">
+        <p>© 2026 Utkarsh Paliwal. Built with care, deployed with confidence.</p>
+    </footer>
 
-</div>
-<script type="text/javascript">
-$(document).ready(function() {
- 
-     $('#p1_img img').addClass("animated flipInX"); 
-     
-});
-  </script>
-
+    <script src="main.js"></script>
 </body>
 </html>
