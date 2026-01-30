@@ -19,7 +19,6 @@
             <a href="#" class="nav-logo">UP</a>
             <div class="nav-links">
                 <a href="#about">About</a>
-                <a href="#work">Work</a>
                 <a href="#projects">Projects</a>
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
                     <span class="theme-icon">☀️</span>
@@ -47,7 +46,7 @@
                     </span>
                 </div>
                 <div class="hero-actions">
-                    <a href="#work" class="btn btn-primary">View My Work</a>
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                 </div>
             </div>
@@ -164,117 +163,10 @@
             </div>
         </section>
 
-        <!-- Featured Case Study -->
-        <section id="work" class="section case-study">
-            <div class="section-header">
-                <span class="section-number">03</span>
-                <h2 class="section-title">Featured Work</h2>
-            </div>
-            <div class="case-study-content">
-                <div class="case-header">
-                    <span class="case-label">Case Study</span>
-                    <h3 class="case-title">Production Data Extraction Pipeline</h3>
-                    <p class="case-subtitle">Rebuilding a brittle batch system into a resilient, observable pipeline</p>
-                </div>
-
-                <div class="case-section">
-                    <h4>The Problem</h4>
-                    <p>
-                        The existing data extraction system was a collection of scheduled scripts that pulled from 15+ external sources. It failed silently, had no retry logic, and required manual intervention 2-3 times per week. When it broke, nobody knew until downstream reports showed stale data—sometimes days later.
-                    </p>
-                    <p>
-                        The business impact was real: compliance reports were delayed, customer data was inconsistent, and the team was spending 20% of their time firefighting instead of building. This pipeline fed tax calculation and regulatory reporting workflows where data correctness isn't optional—errors surface as audit findings, not just bug tickets.
-                    </p>
-                </div>
-
-                <div class="case-section">
-                    <h4>Constraints</h4>
-                    <ul class="case-list">
-                        <li>Zero downtime during migration—existing pipelines couldn't stop</li>
-                        <li>External APIs had rate limits, inconsistent schemas, and no change notifications</li>
-                        <li>Data had to be consistent across sources (eventual consistency acceptable, but bounded)</li>
-                        <li>Team bandwidth was limited—solution had to be operationally simple</li>
-                    </ul>
-                </div>
-
-                <div class="case-section">
-                    <h4>My Approach</h4>
-                    <p>
-                        I started by instrumenting the existing system to understand actual failure patterns—not assumed ones. This revealed that 80% of failures came from three sources with specific, fixable issues.
-                    </p>
-                    <p>
-                        Rather than a big-bang rewrite, I designed a parallel pipeline architecture using AWS Step Functions. Each extraction became an independent state machine with built-in retries, exponential backoff, and dead-letter queues for manual inspection. I introduced checkpointing so failed runs could resume rather than restart.
-                    </p>
-                    <p>
-                        Critically, I added change detection at the ingestion boundary—hashing incoming records against previous state to filter unchanged data before it hit downstream systems. This eliminated false update noise that had been triggering unnecessary reprocessing, alerts, and cache invalidations across dependent services.
-                    </p>
-                </div>
-
-                <div class="case-section">
-                    <h4>Key Design Decisions</h4>
-                    <div class="decision-grid">
-                        <div class="decision">
-                            <span class="decision-label">Decision</span>
-                            <p><strong>Step Functions over custom orchestration</strong></p>
-                            <span class="decision-label">Trade-off</span>
-                            <p>Higher per-execution cost, but dramatically reduced operational complexity. Visual debugging in the AWS console caught issues that would have required log archaeology before.</p>
-                        </div>
-                        <div class="decision">
-                            <span class="decision-label">Decision</span>
-                            <p><strong>Idempotent writes with conflict resolution</strong></p>
-                            <span class="decision-label">Trade-off</span>
-                            <p>Added complexity to write path, but enabled safe retries and eliminated entire classes of data corruption bugs.</p>
-                        </div>
-                        <div class="decision">
-                            <span class="decision-label">Decision</span>
-                            <p><strong>Schema validation at ingestion boundary</strong></p>
-                            <span class="decision-label">Trade-off</span>
-                            <p>Strict validation meant some records were rejected, but it prevented bad data from propagating. Added alerting on validation failures to catch upstream changes early.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="case-section">
-                    <h4>Outcomes</h4>
-                    <div class="outcomes-grid">
-                        <div class="outcome">
-                            <span class="outcome-value">95%</span>
-                            <span class="outcome-label">Reduction in manual interventions</span>
-                        </div>
-                        <div class="outcome">
-                            <span class="outcome-value">~0</span>
-                            <span class="outcome-label">Silent failures (all failures now alert)</span>
-                        </div>
-                        <div class="outcome">
-                            <span class="outcome-value">4hr → 20min</span>
-                            <span class="outcome-label">Mean time to recovery</span>
-                        </div>
-                        <div class="outcome">
-                            <span class="outcome-value">3 months</span>
-                            <span class="outcome-label">Running without major incidents</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="case-tech">
-                    <h4>Tech Stack</h4>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">AWS Lambda</span>
-                        <span class="tech-tag">Step Functions</span>
-                        <span class="tech-tag">SQS</span>
-                        <span class="tech-tag">DynamoDB</span>
-                        <span class="tech-tag">CloudWatch</span>
-                        <span class="tech-tag">Terraform</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- What I'm Known For -->
         <section class="section known-for">
             <div class="section-header">
-                <span class="section-number">03.5</span>
+                <span class="section-number">03</span>
                 <h2 class="section-title">What I'm Known For</h2>
             </div>
             <div class="known-for-content">
@@ -295,58 +187,60 @@
             <div class="projects-grid">
                 <article class="project-card">
                     <div class="project-header">
-                        <h3>Alert Noise Reduction System</h3>
-                        <span class="project-type">Infrastructure</span>
+                        <h3>Content Deduplication Pipeline</h3>
+                        <span class="project-type">Data Engineering</span>
                     </div>
                     <p class="project-desc">
-                        Our CloudWatch alarms were generating 50+ alerts daily, most of which were transient or duplicates. I built an alert aggregation layer that correlated related alerts, suppressed known-transient issues, and added context from recent deployments. The hard part wasn't filtering—it was defining suppression rules that wouldn't mask real incidents or create liability during audits.
+                        Our scraper pipelines were flooding the system with duplicate content—pages that already existed in our database were being reprocessed daily, triggering unnecessary downstream work and alerts. I implemented content-based deduplication by hashing page content at ingestion and comparing against stored hashes in Postgres. The challenge was balancing hash precision with storage costs, and handling partial updates without false negatives.
                     </p>
                     <p class="project-impact">
-                        <strong>Result:</strong> Reduced actionable alerts by 70% while catching the same number of real incidents. On-call burden dropped significantly.
+                        <strong>Result:</strong> 90% reduction in pipeline noise. Downstream systems stopped thrashing on unchanged data, and alert fatigue dropped dramatically.
                     </p>
                     <div class="project-tech">
-                        <span>Lambda</span>
-                        <span>SNS</span>
-                        <span>DynamoDB</span>
+                        <span>Scala</span>
+                        <span>PostgreSQL</span>
+                        <span>Temporal</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>AI Studio — Multi-Agent Workflow Platform</h3>
+                        <span class="project-type">Full Stack / AI</span>
+                    </div>
+                    <p class="project-desc">
+                        Built an intelligent workflow orchestration platform where users describe tasks in natural language and the system coordinates specialized AI agents to execute them. The LLM coordinator parses prompts, selects appropriate agents, manages input/output flow between them, and allows users to export solutions as reusable workflows. The interesting design challenge was building compositional problem-solving—new workflows can build on previously solved sub-problems.
+                    </p>
+                    <p class="project-impact">
+                        <strong>Result:</strong> Complex multi-step processes that took hours manually now execute in minutes. Workflows are shareable and composable across teams.
+                    </p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>Node.js</span>
+                        <span>Socket.IO</span>
                         <span>Python</span>
+                        <span>CrewAI</span>
                     </div>
                 </article>
 
                 <article class="project-card">
                     <div class="project-header">
-                        <h3>API Rate Limiter with Backpressure</h3>
-                        <span class="project-type">Backend System</span>
-                    </div>
-                    <p class="project-desc">
-                        Designed a distributed rate limiting system for our public API that handled burst traffic gracefully. Used token bucket algorithm with Redis, but the interesting part was the backpressure mechanism—instead of hard rejecting requests, we implemented queue-based smoothing for premium clients. The trade-off was accepting higher p99 latency in exchange for zero dropped requests—a deliberate business decision, not a technical one.
-                    </p>
-                    <p class="project-impact">
-                        <strong>Result:</strong> Zero customer-facing rate limit errors during traffic spikes while protecting backend services from overload.
-                    </p>
-                    <div class="project-tech">
-                        <span>Java</span>
-                        <span>Redis</span>
-                        <span>SQS</span>
-                        <span>API Gateway</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3>Infrastructure Cost Optimization</h3>
+                        <h3>Kubernetes Autoscaling with KEDA</h3>
                         <span class="project-type">Cloud / DevOps</span>
                     </div>
                     <p class="project-desc">
-                        Led an audit of our AWS infrastructure that identified $15K/month in waste—over-provisioned RDS instances, orphaned EBS volumes, and Lambda functions with excessive memory allocation. Built automated reporting and right-sizing recommendations. The non-obvious challenge was distinguishing headroom-by-design from accidental over-provisioning without breaking performance under peak load.
+                        Led Kubernetes autoscaling initiatives using KEDA for application workers, implementing intelligent resource allocation across microservices. The challenge was tuning scale-up/scale-down thresholds to handle bursty workloads without over-provisioning during quiet periods—getting this wrong meant either wasted spend or dropped jobs during spikes.
                     </p>
                     <p class="project-impact">
-                        <strong>Result:</strong> 30% reduction in monthly cloud spend without performance impact. Established ongoing cost review as part of deployment process.
+                        <strong>Result:</strong> Achieved 100+ concurrent worker capacity with optimized cloud costs through right-sizing and metrics-based scaling. Workloads now scale to demand automatically.
                     </p>
                     <div class="project-tech">
-                        <span>AWS Cost Explorer</span>
+                        <span>Kubernetes</span>
+                        <span>KEDA</span>
+                        <span>Helm</span>
+                        <span>Prometheus</span>
                         <span>Terraform</span>
-                        <span>Python</span>
-                        <span>CloudWatch</span>
                     </div>
                 </article>
             </div>
